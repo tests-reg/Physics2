@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="stylesheet" href="../../shared/nav.css">
+  <meta charset="UTF-8">
+  <title>CodePen - L/w №9</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div id="fp-nav-container">
+<header class="fp-header">
+  <a href="../../index.html" class="logo">
+    <div class="logo-icon">&#x269B;</div>
+    <span>Фіз</span>Портал
+  </a>
+  <div class="search-box">
+    <span>&#x1F50D;</span>
+    <input type="text" id="fp-search" placeholder="Пошук..." autocomplete="off">
+  </div>
+  <button class="fp-hamburger" id="fp-hamburger" aria-label="Menu">&#9776;</button>
+</header>
+<aside class="fp-sidebar" id="fp-sidebar">
+  <nav>
+    <a class="nav-item" href="../../index.html"><span class="nav-icon">🏠</span> Головна</a>
+    <a class="nav-item" href="../../experiments.html"><span class="nav-icon">🔬</span> Всі Експерименти</a>
+    <div class="nav-section-title">Механіка</div>
+    <a class="nav-item sub-item" href="../../mechanics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../mechanics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Динаміка</div>
+    <a class="nav-item sub-item" href="../../dynamics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../dynamics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мол. фізика</div>
+    <a class="nav-item sub-item" href="../../molecular-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../molecular-physics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мех. робота</div>
+    <a class="nav-item sub-item" href="../../mechanics-work/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ел. поле</div>
+    <a class="nav-item sub-item" href="../../electric-field/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electric-field/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Ел. струм</div>
+    <a class="nav-item sub-item" href="../../electric-current/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Електромагн.</div>
+    <a class="nav-item sub-item" href="../../electromagnetism/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electromagnetism/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Оптика</div>
+    <a class="nav-item sub-item" href="../../optics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../optics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Коливання</div>
+    <a class="nav-item sub-item" href="../../oscillations/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ядерна фізика</div>
+    <a class="nav-item sub-item" href="../../nuclear-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    
+  </nav>
+</aside>
+</div>
+
+
+<div class="page-wrapper">
+<!-- partial:index.partial.html -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Electric field</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+  <header>
+    
+<div id="fp-breadcrumbs" class="breadcrumbs"></div>
+<h1>Магнітне поле</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Розділи</button>
+      <div class="dropdown-content">
+        <a href="#">Механічний рух</a>
+        <a href="#">Динаміка (сили)</a>
+        <a href="#">Молекулярна фізика (тиск, закони архімеда)</a>
+        <a href="#">Механічна робота та енергія</a>
+        <a href="#">Електричне поле</a>
+        <a href="#">Електричний струм</a>
+        <a href="#">Магнітне поле</a>
+        <a href="#">Оптика</a>
+        <a href="#">Ядерна та атомна фізика</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="box">
+    <div class="exercise">
+      <button onClick="z1()" class="dropbtn" id="z1Button">Задача 1</button>
+      <div id="z1" class="z1Content">
+        <button onClick="z1_x()" id="closeButton"><span class="material-symbols-outlined">close</span></button>
+        <h3>Задача 1</h3>
+        <iframe src="https://drive.google.com/file/d/1ZU11GeAKD4SRaelpz-xoIGK4Zee_I1GG/preview" width="130" height="115" allow="autoplay"></iframe>
+        <p>Мідний провідник, маса якого дорівнює m, довжина — l, уміщений горизонтально в однорідне магнітне поле з індукцією В. Вектор магнітної індукції — горизонтальний і перпендикулярний до провідника. Визначте силу струму, яка повинна бути у провіднику, щоб він завис у магнітному полі. Вважайте, що g = 9.8 м/с2. </p>
+        <form>
+          <div class="value">
+            <p>Введіть масу:</p>
+            <input type="text" name="mass" placeholder="[m]=1кг">
+          </div>
+          <div class="value">
+            <p>Введіть довжину:</p>
+            <input type="text" name="length" placeholder="[l]=1м">
+          </div>
+          <div class="value">
+            <p>Введіть індукцію магнітного поля:</p>
+            <input type="text" name="induction" placeholder="[В]=1Тл">
+          </div>
+        </form>
+        <button onClick="calculationZ1()">Розв'язати</button>
+        <p id="solution_z1"></p>
+      </div>
+
+    </div>
+    <div class="exercise">
+      <button onClick="z2()" class="dropbtn" id="z2Button">Задача 2</button>
+      <div id="z2" class="z1Content">
+        <button onClick="z2_x()" id="closeButton"><span class="material-symbols-outlined">close</span></button>
+        <h3>Задача 2</h3>
+        <iframe src="https://drive.google.com/file/d/1FQ5oWtMiVDUVJKS2X3aPBVk_D2XxHb1k/preview" width="213" height="200" allow="autoplay"></iframe>
+        <p>Плоска прямокутна рамка з одного витка проводу, що охоплює прямокутник із площею s, лежить на горизонтальній площині в однорідному вертикальному магнітному полі з індукцією B. Який заряд протече по рамці, якщо її обернути навколо однієї зі своїх сторін на 180°? Опір рамки дорівнює R. </p>
+        <form>
+          <div class="value">
+            <p>Введіть опір рамки:</p>
+            <input type="text" name="resistance_z2" placeholder="[R]=1Om">
+          </div>
+          <div class="value">
+            <p>Введіть полщу прямокутника:</p>
+            <input type="text" name="square_z2" placeholder="[S]=1м^2">
+          </div>
+          <div class="value">
+            <p>Введіть індукцію магнітного поля:</p>
+            <input type="text" name="induction_z2" placeholder="[В]=1Тл">
+          </div>
+        </form>
+        <button onClick="calculationZ2()">Розв'язати</button>
+        <p id="solution_z2"></p>
+      </div>
+    </div>
+
+    <div class="exercise">
+      <button onClick="z3()" class="dropbtn" id="z3Button">Задача 3</button>
+      <div id="z3" class="z1Content">
+        <button onClick="z3_x()" id="closeButton"><span class="material-symbols-outlined">close</span></button>
+        <h3>Задача 3</h3>
+        <iframe src="https://drive.google.com/file/d/1YMa5a4avd8dpgBoupdqI3yaKUtvCjAhN/preview" width="268" height="193" allow="autoplay"></iframe>
+        <p>Котушку з індуктивністю L, по якій ішов струм, замкнули на коротко. На рисунку зображений графік залежності сили струму в котушці від часу. Визначте енергію, що виділилася у котушці за перші 20 мс після замикання. </p>
+        <form>
+          <div class="value">
+            <p>Введіть Індуктивність катушки:</p>
+            <input type="text" name="induction_z3" placeholder="[L]=1Гн">
+          </div>
+          <div class="value">
+            <p>Введіть силу струму коли t = 0:</p>
+            <input type="text" name="amperage_0" placeholder="[I]=1А">
+          </div>
+          <div class="value">
+            <p>Введіть силу струму коли t = 20ms:</p>
+            <input type="text" name="amperage_1" placeholder="[I]=1А">
+          </div>
+        </form>
+        <button onClick="calculationZ3()">Розв'язати</button>
+        <p id="solution_z3"></p>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-wrapper -->
+
+
+
+<script>
+(function(){
+  var btn = document.getElementById('fp-hamburger');
+  var sidebar = document.getElementById('fp-sidebar');
+  if (btn && sidebar) {
+    btn.addEventListener('click', function(e){ e.stopPropagation(); sidebar.classList.toggle('open'); });
+    document.addEventListener('click', function(e){ if(!sidebar.contains(e.target)&&e.target!==btn) sidebar.classList.remove('open'); });
+  }
+  var input = document.getElementById('fp-search');
+  if (input) {
+    input.addEventListener('input', function(){
+      var q = input.value.toLowerCase();
+      document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+        a.style.display = (!q||a.textContent.toLowerCase().includes(q))?'':'none';
+      });
+    });
+  }
+  // Highlight active
+  var cur = window.location.pathname;
+  document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+    if (a.href && cur.indexOf(new URL(a.href).pathname) !== -1) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

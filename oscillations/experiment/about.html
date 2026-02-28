@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="stylesheet" href="../../shared/nav.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про нас</title>
+    <style>
+        {
+            box-sizing: border-box;
+        }
+
+        p {
+            border: 1px solid #000000;
+            padding: 10px;
+        }
+
+        body {
+            font-family: cursive;
+            padding: 10px;
+            background: #ac8655;
+        }
+
+        .header {
+            padding: 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .header h1 {
+            font-size: 50px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border: 1px solid white;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .leftcolumn {
+            float: left;
+            width: 100%;
+        }
+
+        .rightcolumn {
+            float: left;
+            width: 100%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+            position: center;
+        }
+
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="fp-nav-container">
+<header class="fp-header">
+  <a href="../../index.html" class="logo">
+    <div class="logo-icon">&#x269B;</div>
+    <span>Фіз</span>Портал
+  </a>
+  <div class="search-box">
+    <span>&#x1F50D;</span>
+    <input type="text" id="fp-search" placeholder="Пошук..." autocomplete="off">
+  </div>
+  <button class="fp-hamburger" id="fp-hamburger" aria-label="Menu">&#9776;</button>
+</header>
+<aside class="fp-sidebar" id="fp-sidebar">
+  <nav>
+    <a class="nav-item" href="../../index.html"><span class="nav-icon">🏠</span> Головна</a>
+    <a class="nav-item" href="../../experiments.html"><span class="nav-icon">🔬</span> Всі Експерименти</a>
+    <div class="nav-section-title">Механіка</div>
+    <a class="nav-item sub-item" href="../../mechanics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../mechanics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Динаміка</div>
+    <a class="nav-item sub-item" href="../../dynamics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../dynamics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мол. фізика</div>
+    <a class="nav-item sub-item" href="../../molecular-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../molecular-physics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мех. робота</div>
+    <a class="nav-item sub-item" href="../../mechanics-work/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ел. поле</div>
+    <a class="nav-item sub-item" href="../../electric-field/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electric-field/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Ел. струм</div>
+    <a class="nav-item sub-item" href="../../electric-current/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Електромагн.</div>
+    <a class="nav-item sub-item" href="../../electromagnetism/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electromagnetism/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Оптика</div>
+    <a class="nav-item sub-item" href="../../optics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../optics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Коливання</div>
+    <a class="nav-item sub-item" href="../../oscillations/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ядерна фізика</div>
+    <a class="nav-item sub-item" href="../../nuclear-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    
+  </nav>
+</aside>
+</div>
+
+
+<div class="page-wrapper">
+    <div class="header">
+        
+<div id="fp-breadcrumbs" class="breadcrumbs"></div>
+<h1>Про нас</h1>
+    </div>
+
+    <div class="topnav">
+        <a href="index.html">Головна</a>
+        <a href="news.html">Новини</a>
+        <a href="contact.html">Контакти</a>
+        <a href="about.html">Про нас</a>
+    </div>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>Про нас</h2>
+                <p>Ми – студенти Черкаського національного університету. Ми захоплені фізикою і прагнемо допомогти всім, хто хоче краще розуміти цей захоплюючий предмет. Наш проект створено з метою зробити навчання фізики доступним і цікавим для кожного. Ми розробляємо навчальні матеріали, організовуємо воркшопи та експериментальні демонстрації, щоб ви могли глибше зануритися у світ науки. Приєднуйтесь до нас, і разом ми зробимо вивчення фізики захоплюючою подорожжю!.</p>
+            </div>
+        </div>
+    </div>
+</div><!-- /page-wrapper -->
+
+
+
+<script>
+(function(){
+  var btn = document.getElementById('fp-hamburger');
+  var sidebar = document.getElementById('fp-sidebar');
+  if (btn && sidebar) {
+    btn.addEventListener('click', function(e){ e.stopPropagation(); sidebar.classList.toggle('open'); });
+    document.addEventListener('click', function(e){ if(!sidebar.contains(e.target)&&e.target!==btn) sidebar.classList.remove('open'); });
+  }
+  var input = document.getElementById('fp-search');
+  if (input) {
+    input.addEventListener('input', function(){
+      var q = input.value.toLowerCase();
+      document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+        a.style.display = (!q||a.textContent.toLowerCase().includes(q))?'':'none';
+      });
+    });
+  }
+  // Highlight active
+  var cur = window.location.pathname;
+  document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+    if (a.href && cur.indexOf(new URL(a.href).pathname) !== -1) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+}
+
+aside{
+    padding: 120px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 450px;
+    height: 100vh;
+
+    border: 0 solid dimgray;
+    border-right-width: 1px;
+}
+
+.sideCard{
+    width: 400px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 5px 10px;
+    border: 1px solid dimgray;
+    border-radius: 8px;
+}
+
+h1{
+    margin: 40px 20px;
+    text-align: center;
+}
+
+.card{
+    margin: 40px 20px;
+    outline: black;
+    display: flex;
+    gap: 20px;
+}
+
+.cardAside{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 700px;
+}
+
+p{
+    font-size: 18px;
+}
+
+.card .video{
+    border-radius: 8px;
+    background: #000;
+    width: 400px;
+    height: 224px;
+}
+
+.video:hover{
+    cursor: pointer;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+a:active{
+    color: dimgray;
+}

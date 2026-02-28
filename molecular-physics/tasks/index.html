@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="stylesheet" href="../../shared/nav.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Задачі з молекулярної фізики</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="fp-nav-container">
+<header class="fp-header">
+  <a href="../../index.html" class="logo">
+    <div class="logo-icon">&#x269B;</div>
+    <span>Фіз</span>Портал
+  </a>
+  <div class="search-box">
+    <span>&#x1F50D;</span>
+    <input type="text" id="fp-search" placeholder="Пошук..." autocomplete="off">
+  </div>
+  <button class="fp-hamburger" id="fp-hamburger" aria-label="Menu">&#9776;</button>
+</header>
+<aside class="fp-sidebar" id="fp-sidebar">
+  <nav>
+    <a class="nav-item" href="../../index.html"><span class="nav-icon">🏠</span> Головна</a>
+    <a class="nav-item" href="../../experiments.html"><span class="nav-icon">🔬</span> Всі Експерименти</a>
+    <div class="nav-section-title">Механіка</div>
+    <a class="nav-item sub-item" href="../../mechanics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../mechanics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Динаміка</div>
+    <a class="nav-item sub-item" href="../../dynamics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../dynamics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мол. фізика</div>
+    <a class="nav-item sub-item" href="../../molecular-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../molecular-physics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мех. робота</div>
+    <a class="nav-item sub-item" href="../../mechanics-work/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ел. поле</div>
+    <a class="nav-item sub-item" href="../../electric-field/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electric-field/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Ел. струм</div>
+    <a class="nav-item sub-item" href="../../electric-current/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Електромагн.</div>
+    <a class="nav-item sub-item" href="../../electromagnetism/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electromagnetism/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Оптика</div>
+    <a class="nav-item sub-item" href="../../optics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../optics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Коливання</div>
+    <a class="nav-item sub-item" href="../../oscillations/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ядерна фізика</div>
+    <a class="nav-item sub-item" href="../../nuclear-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    
+  </nav>
+</aside>
+</div>
+
+
+<div class="page-wrapper">
+<header>
+    <a href="#" class="home-button">На головну</a>
+    
+<div id="fp-breadcrumbs" class="breadcrumbs"></div>
+<h1>Задачі з молекулярної фізики</h1>
+    <div class="logo">
+        <img src="logo.svg" alt="Логотип"/>
+    </div>
+</header>
+<main>
+    <nav>
+        <button onclick="switchTask(1)">Задача 1</button>
+        <button onclick="switchTask(2)">Задача 2</button>
+        <button onclick="switchTask(3)">Задача 3</button>
+    </nav>
+    <section id="task1" class="task">
+        <h2>Задача 1</h2>
+        <p>У балоні міститься ν = 6 моль газу. Скільки молекул газу в цьому балоні?</p>
+        <img src="task1.png" alt="">
+        <p>Приклад обчислення:</p>
+        <img src="task1_1.png">
+        <div class="inputs">
+            <label for="param1">ν (моль):</label>
+            <input type="number" id="param1"/>
+            <p>Число Авогадро (N_a) є сталою величиною:</p>
+            <img src="task1_2.png">
+            <br>
+        </div>
+        <button onclick="calculateTask(1)">Розрахувати</button>
+        <div class="solution" id="solution1"></div>
+    </section>
+    <section id="task2" class="task" style="display: none">
+        <h2>Задача 2</h2>
+
+        <p>В балоні міститься газ при температурі t = –73 ˚С. Концентрація молекул газу n=5·10^23 м-3. Визначити тиск р газу. Стала Больцмана k = 1,38·10-23 Дж/К.</p>
+        <img src="task2.png" alt="">
+
+        <p>Приклад обчислення:</p>
+        <img src="task2_1.png" alt="">
+
+        <div class="inputs">
+            <label for="param3">t (C)</label>
+            <input type="number" id="param3"/>
+            <label for="param4">n (10^23 м^-3)</label>
+            <input type="number" id="param4"/>
+            <p>Стала Больцмана (k) є сталою величиною:</p>
+            <img src="task2_2.png" alt="">
+        </div>
+        <button onclick="calculateTask(2)">Розрахувати</button>
+        <div class="solution" id="solution2"></div>
+    </section>
+    <section id="task3" class="task" style="display: none">
+
+        <h2>Задача 3</h2>
+
+        <p>Концентрація молекул у балоні з газом n = 3·1025 м-3, тиск p = 106 Па. Чому дорівнює середня кінетична енергія Е однієї молекули?</p>
+        <img src="task3.png" alt="">
+
+        <p>Приклад обчислення:</p>
+        <img src="task3_1.png" alt="">
+
+        <div class="inputs">
+            <label for="param5">n (10^23 м^-3)</label>
+            <input type="number" id="param5"/>
+            <label for="param6">p (Па)</label>
+            <input type="number" id="param6"/>
+        </div>
+        <button onclick="calculateTask(3)">Розрахувати</button>
+        <div class="solution" id="solution3"></div>
+    </section>
+</main>
+<script src="script.js"></script>
+</div><!-- /page-wrapper -->
+
+
+
+<script>
+(function(){
+  var btn = document.getElementById('fp-hamburger');
+  var sidebar = document.getElementById('fp-sidebar');
+  if (btn && sidebar) {
+    btn.addEventListener('click', function(e){ e.stopPropagation(); sidebar.classList.toggle('open'); });
+    document.addEventListener('click', function(e){ if(!sidebar.contains(e.target)&&e.target!==btn) sidebar.classList.remove('open'); });
+  }
+  var input = document.getElementById('fp-search');
+  if (input) {
+    input.addEventListener('input', function(){
+      var q = input.value.toLowerCase();
+      document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+        a.style.display = (!q||a.textContent.toLowerCase().includes(q))?'':'none';
+      });
+    });
+  }
+  // Highlight active
+  var cur = window.location.pathname;
+  document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+    if (a.href && cur.indexOf(new URL(a.href).pathname) !== -1) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="stylesheet" href="../../shared/nav.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задача 3</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+<div id="fp-nav-container">
+<header class="fp-header">
+  <a href="../../index.html" class="logo">
+    <div class="logo-icon">&#x269B;</div>
+    <span>Фіз</span>Портал
+  </a>
+  <div class="search-box">
+    <span>&#x1F50D;</span>
+    <input type="text" id="fp-search" placeholder="Пошук..." autocomplete="off">
+  </div>
+  <button class="fp-hamburger" id="fp-hamburger" aria-label="Menu">&#9776;</button>
+</header>
+<aside class="fp-sidebar" id="fp-sidebar">
+  <nav>
+    <a class="nav-item" href="../../index.html"><span class="nav-icon">🏠</span> Головна</a>
+    <a class="nav-item" href="../../experiments.html"><span class="nav-icon">🔬</span> Всі Експерименти</a>
+    <div class="nav-section-title">Механіка</div>
+    <a class="nav-item sub-item" href="../../mechanics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../mechanics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Динаміка</div>
+    <a class="nav-item sub-item" href="../../dynamics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../dynamics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мол. фізика</div>
+    <a class="nav-item sub-item" href="../../molecular-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../molecular-physics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мех. робота</div>
+    <a class="nav-item sub-item" href="../../mechanics-work/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ел. поле</div>
+    <a class="nav-item sub-item" href="../../electric-field/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electric-field/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Ел. струм</div>
+    <a class="nav-item sub-item" href="../../electric-current/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Електромагн.</div>
+    <a class="nav-item sub-item" href="../../electromagnetism/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electromagnetism/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Оптика</div>
+    <a class="nav-item sub-item" href="../../optics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../optics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Коливання</div>
+    <a class="nav-item sub-item" href="../../oscillations/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ядерна фізика</div>
+    <a class="nav-item sub-item" href="../../nuclear-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    
+  </nav>
+</aside>
+</div>
+
+
+<div class="page-wrapper">
+    <div class="container">
+      
+<div id="fp-breadcrumbs" class="breadcrumbs"></div>
+<h1>Задача 3</h1>
+      <p>
+        Світловий промінь переходить з повітря в інше середовище під кутом
+        падіння. Знайдіть кут заломлення за законом Снелліуса.
+      </p>
+
+      <label for="incidentAngle3">Введіть кут падіння (в градусах):</label>
+      <input type="text" id="incidentAngle3" />
+
+      <label for="refractionIndex"
+        >Введіть показник заломлення середовища (n):</label
+      >
+      <input type="text" id="refractionIndex" />
+
+      <div class="button-container">
+        <button class="calculate-button" onclick="calculateRefraction()">
+          Порахувати кут заломлення
+        </button>
+        <a href="index.html" class="back-button">Назад до списку задач</a>
+      </div>
+      <div class="result" id="result3"></div>
+    </div>
+
+    <script src="js.js"></script>
+  </div><!-- /page-wrapper -->
+
+
+
+<script>
+(function(){
+  var btn = document.getElementById('fp-hamburger');
+  var sidebar = document.getElementById('fp-sidebar');
+  if (btn && sidebar) {
+    btn.addEventListener('click', function(e){ e.stopPropagation(); sidebar.classList.toggle('open'); });
+    document.addEventListener('click', function(e){ if(!sidebar.contains(e.target)&&e.target!==btn) sidebar.classList.remove('open'); });
+  }
+  var input = document.getElementById('fp-search');
+  if (input) {
+    input.addEventListener('input', function(){
+      var q = input.value.toLowerCase();
+      document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+        a.style.display = (!q||a.textContent.toLowerCase().includes(q))?'':'none';
+      });
+    });
+  }
+  // Highlight active
+  var cur = window.location.pathname;
+  document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+    if (a.href && cur.indexOf(new URL(a.href).pathname) !== -1) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>

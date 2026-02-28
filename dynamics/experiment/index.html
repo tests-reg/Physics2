@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="stylesheet" href="../../shared/nav.css">
+  <meta charset="UTF-8">
+  <title>CodePen - Лаб 9</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div id="fp-nav-container">
+<header class="fp-header">
+  <a href="../../index.html" class="logo">
+    <div class="logo-icon">&#x269B;</div>
+    <span>Фіз</span>Портал
+  </a>
+  <div class="search-box">
+    <span>&#x1F50D;</span>
+    <input type="text" id="fp-search" placeholder="Пошук..." autocomplete="off">
+  </div>
+  <button class="fp-hamburger" id="fp-hamburger" aria-label="Menu">&#9776;</button>
+</header>
+<aside class="fp-sidebar" id="fp-sidebar">
+  <nav>
+    <a class="nav-item" href="../../index.html"><span class="nav-icon">🏠</span> Головна</a>
+    <a class="nav-item" href="../../experiments.html"><span class="nav-icon">🔬</span> Всі Експерименти</a>
+    <div class="nav-section-title">Механіка</div>
+    <a class="nav-item sub-item" href="../../mechanics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../mechanics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Динаміка</div>
+    <a class="nav-item sub-item" href="../../dynamics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../dynamics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мол. фізика</div>
+    <a class="nav-item sub-item" href="../../molecular-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../molecular-physics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мех. робота</div>
+    <a class="nav-item sub-item" href="../../mechanics-work/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ел. поле</div>
+    <a class="nav-item sub-item" href="../../electric-field/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electric-field/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Ел. струм</div>
+    <a class="nav-item sub-item" href="../../electric-current/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Електромагн.</div>
+    <a class="nav-item sub-item" href="../../electromagnetism/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electromagnetism/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Оптика</div>
+    <a class="nav-item sub-item" href="../../optics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../optics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Коливання</div>
+    <a class="nav-item sub-item" href="../../oscillations/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ядерна фізика</div>
+    <a class="nav-item sub-item" href="../../nuclear-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    
+  </nav>
+</aside>
+</div>
+
+
+<div class="page-wrapper">
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Рамка навколо тексту</title>
+<style>
+
+</style>
+</head>
+<body>
+
+</div><!-- /page-wrapper -->
+
+
+
+<script>
+(function(){
+  var btn = document.getElementById('fp-hamburger');
+  var sidebar = document.getElementById('fp-sidebar');
+  if (btn && sidebar) {
+    btn.addEventListener('click', function(e){ e.stopPropagation(); sidebar.classList.toggle('open'); });
+    document.addEventListener('click', function(e){ if(!sidebar.contains(e.target)&&e.target!==btn) sidebar.classList.remove('open'); });
+  }
+  var input = document.getElementById('fp-search');
+  if (input) {
+    input.addEventListener('input', function(){
+      var q = input.value.toLowerCase();
+      document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+        a.style.display = (!q||a.textContent.toLowerCase().includes(q))?'':'none';
+      });
+    });
+  }
+  // Highlight active
+  var cur = window.location.pathname;
+  document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+    if (a.href && cur.indexOf(new URL(a.href).pathname) !== -1) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>
+</head>
+<body>
+
+<div class="header">
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Експерименти з відео</title>
+  <style>
+    /* Додати CSS-стилі тут */
+  </style>
+</head>
+<body>
+  
+<div id="fp-breadcrumbs" class="breadcrumbs"></div>
+<h1>Динаміка</h1>
+
+  <div class="videos">
+    <div class="video">
+      <p>Динаміка - це розділ науки, який вивчає рух тіл та причини цього руху. Основна мета динаміки полягає в тому, щоб з'ясувати, які сили впливають на об'єкти і як ці сили змінюють рух та взаємодіють між об'єктами.</p>
+      <style>
+    /* Додати CSS-стилі тут */
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: px;
+    }
+    .buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+     <div class="topnav">
+  <a href="#">На головну</a>
+  <a href="#">Експерименти</a>
+  <a href="#">Задачі</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <meta charset="utf-8">
+<title>Рамка навколо тексту</title>
+      <h2>Експеримент 1 Уолтер Левин — Эксперимент с маятником</h2>
+      <iframe <iframe 
+      width="560" height="315" src="https://www.youtube.com/embed/_8364-7Q_Io?feature=shared" title="Назва відео 1" frameborder="0" allow="autoplay; fullscreen"></iframe>
+      <p>Опис експерименту 1. 
+Експеримент з маятником є класичним дослідженням у фізиці, що допомагає розуміти основні принципи коливань та закони руху. Основна ідея експерименту полягає в тому, щоб вивчити період коливань маятника та його залежність від довжини ниті.
+
+Для проведення експерименту потрібен маятник, який складається з тяжілої точки (наприклад, маси) підвішеної на ниті або струні. Тяжіла точка вільно коливається під дією сили ваги.
+
+Для вимірювання періоду коливань маятника, спочатку необхідно встановити початкові умови. Це може бути встановлення маятника так, щоб він знаходився в покої або зробив перший колив, після чого вимірюється час одного повного коливання (від точки звороту до повернення в цю ж точку).</p>
+    </div>
+
+    <div class="video">
+      <h2>Експеримент 2</h2>
+      <h2>Деформація тіла Види деформації Сила пружності Закон Гука</h2>
+      <iframe <iframe width="560" height="315" src="https://www.youtube.com/embed/X3xEORymxug?feature=shared_2" title="Назва відео 2" frameborder="0" allow="autoplay; fullscreen"></iframe>
+      <p>Опис експерименту 2 Експеримент з деформацією тіла є важливим дослідженням у фізиці, що допомагає розкрити основні концепції деформації, типи деформацій, силу пружності та закон Гука. Основна мета експерименту полягає в тому, щоб дослідити, як тіло реагує на зовнішні сили і які зміни відбуваються в його структурі при різних умовах навантаження.
+
+Деформація тіла: Деформація в фізиці означає зміну форми або розмірів тіла під дією зовнішніх сил. У експерименті ми можемо спостерігати, як тіло деформується при прикладенні сил і як ця деформація змінюється залежно від величини сил.
+Види деформації: В експерименті можуть спостерігатися різні види деформації, такі як розтягнення, стискання, згинання, зсув тощо. Кожен тип деформації характеризується своїми особливостями і залежить від прикладених сил і властивостей матеріалу.
+Сила пружності: Це сила, яка зумовлює повернення тіла у його початковий стан після припинення дії зовнішніх сил. У експерименті ми можемо вивчити, як сила пружності впливає на поведінку тіла при деформації і як вона пов'язана з його властивостями.
+Закон Гука: Закон Гука є важливим законом, що описує поведінку пружних тіл при малих деформаціях. В експерименті ми можемо перевірити цей закон, визначаючи залежність між силою, прикладеною до тіла, і величиною його деформації.</p>
+    </div>
+
+    <div class="video">
+      <h2>Експеримент 3</h2>
+      <h2>Закон Бернулли</h2>
+      <iframe <iframe width="560" height="315" src="https://www.youtube.com/embed/Qdr6pyQELz4?feature=shared_3" title="Назва відео 3" frameborder="0" allow="autoplay; fullscreen"></iframe>
+      <p>Опис експерименту 3 "Експеримент за законом Бернуллі є класичним дослідженням у фізиці, який допомагає розкрити основні принципи гідродинаміки та закони руху рідини. Основна ідея експерименту полягає в тому, щоб вивчити залежність тиску рідини в трубі від її швидкості та висоти.
+
+Для проведення експерименту потрібен спеціальний пристрій, який складається з труби або каналу, через який пропускається рідина (наприклад, вода або повітря). Цей пристрій дозволяє створити різницю тисків у рідині на різних ділянках труби.
+
+У процесі експерименту змінюються параметри, такі як швидкість руху рідини та її висота у трубі. За допомогою спеціальних датчиків або приладів вимірюються значення тиску на різних ділянках труби.
+
+Закон Бернуллі стверджує, що в точці з більшою швидкістю руху рідини тиск буде менший, а в точці з меншою швидкістю - більший. Цей експеримент допомагає показати цю залежність та підтвердити принципи гідродинаміки, що мають важливе значення в багатьох областях науки та техніки."</p>
+    </div>
+  </div>
+
+  <script>
+    /* Додати JavaScript-код тут */
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

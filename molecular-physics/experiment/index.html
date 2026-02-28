@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="stylesheet" href="../../shared/nav.css">
+  <meta charset="UTF-8">
+  <title>CodePen - Лаб.9</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div id="fp-nav-container">
+<header class="fp-header">
+  <a href="../../index.html" class="logo">
+    <div class="logo-icon">&#x269B;</div>
+    <span>Фіз</span>Портал
+  </a>
+  <div class="search-box">
+    <span>&#x1F50D;</span>
+    <input type="text" id="fp-search" placeholder="Пошук..." autocomplete="off">
+  </div>
+  <button class="fp-hamburger" id="fp-hamburger" aria-label="Menu">&#9776;</button>
+</header>
+<aside class="fp-sidebar" id="fp-sidebar">
+  <nav>
+    <a class="nav-item" href="../../index.html"><span class="nav-icon">🏠</span> Головна</a>
+    <a class="nav-item" href="../../experiments.html"><span class="nav-icon">🔬</span> Всі Експерименти</a>
+    <div class="nav-section-title">Механіка</div>
+    <a class="nav-item sub-item" href="../../mechanics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../mechanics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Динаміка</div>
+    <a class="nav-item sub-item" href="../../dynamics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../dynamics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мол. фізика</div>
+    <a class="nav-item sub-item" href="../../molecular-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../molecular-physics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мех. робота</div>
+    <a class="nav-item sub-item" href="../../mechanics-work/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ел. поле</div>
+    <a class="nav-item sub-item" href="../../electric-field/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electric-field/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Ел. струм</div>
+    <a class="nav-item sub-item" href="../../electric-current/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Електромагн.</div>
+    <a class="nav-item sub-item" href="../../electromagnetism/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electromagnetism/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Оптика</div>
+    <a class="nav-item sub-item" href="../../optics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../optics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Коливання</div>
+    <a class="nav-item sub-item" href="../../oscillations/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ядерна фізика</div>
+    <a class="nav-item sub-item" href="../../nuclear-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    
+  </nav>
+</aside>
+</div>
+
+
+<div class="page-wrapper">
+<!-- partial:index.partial.html -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Рамка навколо тексту</title>
+<style>
+
+</style>
+</head>
+<body>
+
+</div><!-- /page-wrapper -->
+
+
+
+<script>
+(function(){
+  var btn = document.getElementById('fp-hamburger');
+  var sidebar = document.getElementById('fp-sidebar');
+  if (btn && sidebar) {
+    btn.addEventListener('click', function(e){ e.stopPropagation(); sidebar.classList.toggle('open'); });
+    document.addEventListener('click', function(e){ if(!sidebar.contains(e.target)&&e.target!==btn) sidebar.classList.remove('open'); });
+  }
+  var input = document.getElementById('fp-search');
+  if (input) {
+    input.addEventListener('input', function(){
+      var q = input.value.toLowerCase();
+      document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+        a.style.display = (!q||a.textContent.toLowerCase().includes(q))?'':'none';
+      });
+    });
+  }
+  // Highlight active
+  var cur = window.location.pathname;
+  document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+    if (a.href && cur.indexOf(new URL(a.href).pathname) !== -1) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>
+</head>
+<body>
+
+<div class="header">
+  
+<div id="fp-breadcrumbs" class="breadcrumbs"></div>
+<h1>Молекулярна фізика</h1>
+  <p>Молекулярна фізика — розділ фізики, який вивчає речовину на рівні молекул. Речовину на рівні атомів вивчає атомна фізика. Поділяється на фізику газів, фізику рідин, кристалофізику, фізику полімерів.</p>
+</div>
+
+<div class="topnav">
+  <a href="#">На головну</a>
+  <a href="#">Експерименти</a>
+  <a href="#">Задачі</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <meta charset="utf-8">
+<title>Рамка навколо тексту</title>
+      <h2>Дослід №1 "Яйце у склянці з водою"</h2>
+      <h5>Яйце опускається на дно склянки зі звичайною питною водою, але що станеться, якщо ви додасте у воду сіль?</h5>
+ Що буде, якщо влити в одну склянку рідини різної щільності?
+        <h5>Проведіть цей простий експеримент, результати якого дуже цікаві й можуть розповісти вам кілька несподіваних фактів про щільність рідини.</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yNkp5lRjjog?si=nu2t2TnLY58f9h5O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>Солона вода щільніше, ніж звичайна водопровідна, а чим щільніше рідина, тим легше предмету плавати в ній. Коли ви занурюєте яйце в першу склянку зі звичайною водою, воно опускається на дно, оскільки щільність води низька. Коли ви опускаєте яйце у третю склянку, в якій знаходиться тільки соляний розчин, яйце залишається на поверхні, оскільки щільність солоної води висока.
+
+<p>Якщо ви проявили обережність при додаванні водопровідної води в солону другої (середньої) склянки й не змішали шари солоної та звичайної води, то зможете спостерігати, як дивно плаває яйце посередині склянки. Коли ви опускаєте яйце у другу склянку, воно проходить через верхній шар звичайної водопровідної води й досягає шару солоної води, щільність якої вище, а на цьому рівні вода досить щільна, щоб яйце не тонуло.</p>
+    </div>
+    <div class="card">
+      <h2>Дослід №2 "Поверхневий натяг речовини"</h2>
+      <h5>Рідке мило і молоко.<h5>У кого з цих речовин повехневий натяг більше і чому?</h5>Що буде,якщо змочити ватну палочку у милі та заунрити у посудину з молоком?<h5>Проведіть цей простий експеримент, результати якого дуже цікаві й можуть розповісти вам кілька несподіваних фактів про поверхневий натяг.</h5>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VJfdYHftCAA?si=N0Td7j0tUiNGroZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>І що ми побачили?</p>
+      <p>Мило руйнує поверхневий натяг молока,змушує його рухатись до країв тягнучи за собою барвники.</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Дослід №3 "Залежність об'єму повітря від температури"</h2>
+      <h5>Весь наш простір заповнений повітрям. Чи думала ваша дитина коли-небудь про те, що в будь-який момент зможе відчути його присутність? <h5>Ви можете неймовірно захопити вашого юного дослідника, якщо розповісте йому про ті «чудеса», які здатне творити повітря. <h5>Наприклад, воно може стискуватись і розширюватись. Його поведінка змінюється залежно від температури. </h5>Чи можливо це? Проведіть цей веселий науковий експеримент для дітей, і ви дізнаєтеся, що станеться з повітряною кулькою, якщо нагріти повітря всередині неї.</h5>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IAfXV9fbjyk?si=yELq4JyoMXDyzbZI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p>Коли повітря всередині пляшки нагрівається, воно починає розширюватись. Оскільки з підвищенням температури збільшується кінетична енергія молекул повітря, вони починають рухатися швидше й віддаляються одна від одної. Відстань між молекулами збільшується, і це змушує повітряну кульку розтягуватися. При цьому кількість повітря всередині кульки та пляшки залишається тією ж, що й була, воно просто розширюється при нагріванні й займає більший об’єм.
+
+<p>Отже, тепле повітря займає більший простір, ніж та ж кількість холодного повітря. Тепле повітря важить менше, ніж холодне, що займає той же простір, оскільки в ньому менше молекул. Цей принцип можна спостерігати в дії, якщо полетіти на повітряній кулі.</p>
+    </div>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

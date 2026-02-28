@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+border: 3px solid red;
+padding: 10px;
+  
+}
+
+body {
+  font-family: cursiveBrush Script Std;
+  padding: 40px;
+  background: gray;
+  
+}
+
+/* Header/Blog Заголовок */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+  background:;
+  
+}
+
+/* Стиль верхнего навбара */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  
+}
+
+/* Стиль ссылок верхней навигации */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: 1px solid white;
+}
+
+/* Изменение цвета при наведении */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Создайте два неравных столбца, которые плавают рядом друг с другом */
+/* Левый столбец */
+.leftcolumn {
+  float: left;
+  width: 100%;
+  ;
+}
+
+/* Правый столбец */
+.rightcolumn {
+  float: left;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Фейк-картинка */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Добавить эффект карты для статей */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Очистить float после столбцов */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  position: center;
+  
+ }
+
+
+/* Адаптивный макет - при ширине экрана менее 800 пикселей расположите два столбца друг над другом, а не рядом друг с другом */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Адаптивный макет - при ширине экрана менее 400 пикселей сделайте так, чтобы навигационные ссылки располагались друг над другом, а не рядом друг с другом */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}

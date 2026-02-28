@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ФізПортал — Головна</title>
+  <link rel="stylesheet" href="shared/style.css">
+  <link rel="stylesheet" href="shared/nav.css">
+</head>
+<body>
+<div id="fp-nav-container">
+<header class="fp-header">
+  <a href="./index.html" class="logo">
+    <div class="logo-icon">&#x269B;</div>
+    <span>Фіз</span>Портал
+  </a>
+  <div class="search-box">
+    <span>&#x1F50D;</span>
+    <input type="text" id="fp-search" placeholder="Пошук..." autocomplete="off">
+  </div>
+  <button class="fp-hamburger" id="fp-hamburger" aria-label="Menu">&#9776;</button>
+</header>
+<aside class="fp-sidebar" id="fp-sidebar">
+  <nav>
+    <a class="nav-item" href="./index.html"><span class="nav-icon">🏠</span> Головна</a>
+    <a class="nav-item" href="./experiments.html"><span class="nav-icon">🔬</span> Всі Експерименти</a>
+    <div class="nav-section-title">Механіка</div>
+    <a class="nav-item sub-item" href="./mechanics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="./mechanics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Динаміка</div>
+    <a class="nav-item sub-item" href="./dynamics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="./dynamics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мол. фізика</div>
+    <a class="nav-item sub-item" href="./molecular-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="./molecular-physics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мех. робота</div>
+    <a class="nav-item sub-item" href="./mechanics-work/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ел. поле</div>
+    <a class="nav-item sub-item" href="./electric-field/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="./electric-field/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Ел. струм</div>
+    <a class="nav-item sub-item" href="./electric-current/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Електромагн.</div>
+    <a class="nav-item sub-item" href="./electromagnetism/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="./electromagnetism/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Оптика</div>
+    <a class="nav-item sub-item" href="./optics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="./optics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Коливання</div>
+    <a class="nav-item sub-item" href="./oscillations/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ядерна фізика</div>
+    <a class="nav-item sub-item" href="./nuclear-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    
+  </nav>
+</aside>
+</div>
+
+
+<div class="page-wrapper">
+  <div class="page-content">
+    <div id="fp-breadcrumbs" class="breadcrumbs"></div>
+    <h1>&#x269B; ФізПортал</h1>
+    <h2>Навчальний портал з фізики — Експерименти та Задачі</h2>
+
+    <div class="section-grid">
+      <a class="section-card" href="mechanics/experiment/index.html">
+        <span class="icon">&#x2699;&#xFE0F;</span>
+        <h3>Механіка</h3>
+        <p>Кінематика та динаміка механічного руху</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="tag">Експерименти</span>
+          <span class="tag">Задачі</span>
+        </div>
+      </a>
+      <a class="section-card" href="dynamics/experiment/index.html">
+        <span class="icon">&#x1F300;</span>
+        <h3>Динаміка</h3>
+        <p>Закони Ньютона та рівновага систем</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="tag">Експерименти</span>
+          <span class="tag">Задачі</span>
+        </div>
+      </a>
+      <a class="section-card" href="molecular-physics/experiment/index.html">
+        <span class="icon">&#x269B;</span>
+        <h3>Молекулярна фізика</h3>
+        <p>Термодинаміка та молекулярна будова речовини</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="tag">Експерименти</span>
+          <span class="tag">Задачі</span>
+        </div>
+      </a>
+      <a class="section-card" href="mechanics-work/experiment/index.html">
+        <span class="icon">&#x1F4AA;</span>
+        <h3>Механічна робота</h3>
+        <p>Робота, потужність та механічна енергія</p>
+        <span class="tag">Експерименти</span>
+      </a>
+      <a class="section-card" href="electric-field/experiment/index.html">
+        <span class="icon">&#x26A1;</span>
+        <h3>Електричне поле</h3>
+        <p>Напруженість та потенціал електростатичного поля</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="tag">Експерименти</span>
+          <span class="tag">Задачі</span>
+        </div>
+      </a>
+      <a class="section-card" href="electric-current/experiment/index.html">
+        <span class="icon">&#x1F50B;</span>
+        <h3>Електричний струм</h3>
+        <p>Закон Ома, електричні кола та розрахунки</p>
+        <span class="tag">Експерименти</span>
+      </a>
+      <a class="section-card" href="electromagnetism/experiment/index.html">
+        <span class="icon">&#x1F9F2;</span>
+        <h3>Електрика і Магнетизм</h3>
+        <p>Магнітне поле, індукція та електромагнітні явища</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="tag">Експерименти</span>
+          <span class="tag">Задачі</span>
+        </div>
+      </a>
+      <a class="section-card" href="optics/experiment/index.html">
+        <span class="icon">&#x1F52D;</span>
+        <h3>Оптика</h3>
+        <p>Природа світла, лінзи, дзеркала та оптичні прилади</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <span class="tag">Експерименти</span>
+          <span class="tag">Задачі</span>
+        </div>
+      </a>
+      <a class="section-card" href="oscillations/experiment/index.html">
+        <span class="icon">&#x1F30A;</span>
+        <h3>Коливання і хвилі</h3>
+        <p>Механічні та електромагнітні коливання, хвильова оптика</p>
+        <span class="tag">Експерименти</span>
+      </a>
+      <a class="section-card" href="nuclear-physics/experiment/index.html">
+        <span class="icon">&#x2622;</span>
+        <h3>Ядерна фізика</h3>
+        <p>Будова ядра атома, ядерні реакції та радіоактивність</p>
+        <span class="tag">Експерименти</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function(){
+  var btn = document.getElementById('fp-hamburger');
+  var sidebar = document.getElementById('fp-sidebar');
+  if (btn && sidebar) {
+    btn.addEventListener('click', function(e){ e.stopPropagation(); sidebar.classList.toggle('open'); });
+    document.addEventListener('click', function(e){ if(!sidebar.contains(e.target)&&e.target!==btn) sidebar.classList.remove('open'); });
+  }
+  var input = document.getElementById('fp-search');
+  if (input) {
+    input.addEventListener('input', function(){
+      var q = input.value.toLowerCase();
+      document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+        a.style.display = (!q||a.textContent.toLowerCase().includes(q))?'':'none';
+      });
+    });
+  }
+  // Highlight active
+  var cur = window.location.pathname;
+  document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+    if (a.href && cur.indexOf(new URL(a.href).pathname) !== -1) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>

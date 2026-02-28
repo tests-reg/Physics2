@@ -1,0 +1,72 @@
+img {
+    height: 200px;
+    width: 200px;
+}
+.head {
+    display: flex;
+}
+h1 {
+    margin-left: 350px;
+    margin-top: 75px;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: rgb(2,126,251);
+}
+.condition {
+    display: flex;
+    gap: 70px;
+}
+p img {
+    width: 526px;
+    height: 97px;
+}
+.exerсise {
+    border: 5px solid;
+    font-size: 20px;
+    border-radius: 25px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    border-color: rgb(246, 211, 13);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.exerсise.show {
+    display: block;
+    opacity: 1;
+}
+.fact {
+    border: 5px solid;
+    border-color: #6EAAFA;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 10px 10px 35px;
+    width: 50%;
+    height: 75px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.fact.show {
+    display: block;
+    opacity: 1;
+}
+input {
+    border-radius: 50px;
+    background-color: rgb(246, 211, 13); 
+    border: none; 
+    outline: none; 
+    padding: 0.5em;
+    text-align: end;
+}
+.question_mark {
+    display: none;
+}
+.question_mark.active {
+    display: grid;
+}
+.question_mark.show {
+    display: block;
+    opacity: 1;
+}
+

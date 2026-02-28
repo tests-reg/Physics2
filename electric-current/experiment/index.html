@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="stylesheet" href="../../shared/style.css">
+  <link rel="stylesheet" href="../../shared/nav.css">
+  <meta charset="UTF-8">
+  <title>CodePen - 9 лаба</title>
+  
+
+</head>
+<body>
+<div id="fp-nav-container">
+<header class="fp-header">
+  <a href="../../index.html" class="logo">
+    <div class="logo-icon">&#x269B;</div>
+    <span>Фіз</span>Портал
+  </a>
+  <div class="search-box">
+    <span>&#x1F50D;</span>
+    <input type="text" id="fp-search" placeholder="Пошук..." autocomplete="off">
+  </div>
+  <button class="fp-hamburger" id="fp-hamburger" aria-label="Menu">&#9776;</button>
+</header>
+<aside class="fp-sidebar" id="fp-sidebar">
+  <nav>
+    <a class="nav-item" href="../../index.html"><span class="nav-icon">🏠</span> Головна</a>
+    <a class="nav-item" href="../../experiments.html"><span class="nav-icon">🔬</span> Всі Експерименти</a>
+    <div class="nav-section-title">Механіка</div>
+    <a class="nav-item sub-item" href="../../mechanics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../mechanics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Динаміка</div>
+    <a class="nav-item sub-item" href="../../dynamics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../dynamics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мол. фізика</div>
+    <a class="nav-item sub-item" href="../../molecular-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../molecular-physics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Мех. робота</div>
+    <a class="nav-item sub-item" href="../../mechanics-work/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ел. поле</div>
+    <a class="nav-item sub-item" href="../../electric-field/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electric-field/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Ел. струм</div>
+    <a class="nav-item sub-item" href="../../electric-current/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Електромагн.</div>
+    <a class="nav-item sub-item" href="../../electromagnetism/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../electromagnetism/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Оптика</div>
+    <a class="nav-item sub-item" href="../../optics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <a class="nav-item sub-item" href="../../optics/tasks/index.html"><span class="nav-icon">📝</span> Задачі <span class="sub-badge task">T</span></a>
+    <div class="nav-section-title">Коливання</div>
+    <a class="nav-item sub-item" href="../../oscillations/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    <div class="nav-section-title">Ядерна фізика</div>
+    <a class="nav-item sub-item" href="../../nuclear-physics/experiment/index.html"><span class="nav-icon">⚙️</span> Експерименти <span class="sub-badge exp">Exp</span></a>
+    
+  </nav>
+</aside>
+</div>
+
+
+<div class="page-wrapper">
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Електричний струм</title>
+  <style>
+    body {
+      background-color: #256; /* Темно-синій фон */
+      font-family: Arial, sans-serif;
+      color: #fff; /* Білий текст */
+      text-align: center; /* Вирівнювання по центру */
+    }
+
+    #logo {
+      margin-top: 20px;
+    }
+
+    #logo img {
+      width: 100px;
+      height: auto;
+    }
+
+    #experiment-data {
+      margin-top: 20px;
+    }
+
+    #experiment-data label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    #experiment-data input,
+    #experiment-data select {
+      width: 200px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    #experiment-data button {
+      padding: 10px 20px;
+      background-color: #4CAF50; /* Зелений колір кнопки */
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #experiment-result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/Ld8xTyW/images.jpg" alt="images" border="0"></a>
+  </div>
+  
+<div id="fp-breadcrumbs" class="breadcrumbs"></div>
+<h1>Електричний струм</h1>
+
+  <div id="experiment-data">
+    <label for="component-type">Тип компонента:</label>
+    <select id="component-type" name="component-type">
+      <option value="resistor">Резистор</option>
+      <option value="capacitor">Конденсатор</option>
+    </select>
+
+    <div id="component-inputs">
+      <!-- Тут будуть додаватися вхідні поля для кожного компонента -->
+    </div>
+
+    <button onclick="addComponent()">Додати компонент</button>
+
+    <label for="voltage">Напруга (V):</label>
+    <input type="number" id="voltage" name="voltage">
+
+    <button onclick="calculate()">Розрахувати</button>
+  </div>
+
+  <div id="experiment-result"></div>
+
+  <script>
+    function addComponent() {
+      const componentType = document.getElementById('component-type').value;
+      const componentInputs = document.getElementById('component-inputs');
+
+      const inputLabel = document.createElement('label');
+      inputLabel.textContent = `${componentType.charAt(0).toUpperCase() + componentType.slice(1)} ${componentInputs.children.length + 1}:`;
+      
+      const inputField = document.createElement('input');
+      inputField.type = 'number';
+      inputField.className = componentType;
+      inputField.name = `${componentType}${componentInputs.children.length + 1}`;
+      
+      componentInputs.appendChild(inputLabel);
+      componentInputs.appendChild(inputField);
+    }
+
+    function calculate() {
+      // Ваш код JavaScript для розрахунку та відображення результатів
+    }
+  </script>
+</div><!-- /page-wrapper -->
+
+
+
+<script>
+(function(){
+  var btn = document.getElementById('fp-hamburger');
+  var sidebar = document.getElementById('fp-sidebar');
+  if (btn && sidebar) {
+    btn.addEventListener('click', function(e){ e.stopPropagation(); sidebar.classList.toggle('open'); });
+    document.addEventListener('click', function(e){ if(!sidebar.contains(e.target)&&e.target!==btn) sidebar.classList.remove('open'); });
+  }
+  var input = document.getElementById('fp-search');
+  if (input) {
+    input.addEventListener('input', function(){
+      var q = input.value.toLowerCase();
+      document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+        a.style.display = (!q||a.textContent.toLowerCase().includes(q))?'':'none';
+      });
+    });
+  }
+  // Highlight active
+  var cur = window.location.pathname;
+  document.querySelectorAll('.fp-sidebar .nav-item').forEach(function(a){
+    if (a.href && cur.indexOf(new URL(a.href).pathname) !== -1) a.classList.add('active');
+  });
+})();
+</script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

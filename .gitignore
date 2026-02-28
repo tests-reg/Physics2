@@ -1,0 +1,24 @@
+# Byte-order mark and other special files
+*.DS_Store
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Node
+node_modules/
+
+# Logs
+*.log

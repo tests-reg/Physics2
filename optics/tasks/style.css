@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf2f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1300px;
+    max-height: 800px;
+    margin: 20px auto;
+    background-image: url('Susan Derges.jpg');
+    background-size: cover;  
+    background-position: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-tasks {
+    max-width: 1300px;
+    margin: 20px auto;
+    background-color: rgba(65, 111, 181, 0.863);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    background-color: #dfd5d59d;
+    font-size: 48px;
+    height: 100px;
+    color: #0c0241;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+h2 {
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 20px; 
+    font-size: 36px;
+}
+
+p {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 24px;
+    color: black;
+    font-weight: bolder;
+}
+
+.description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tasks {
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-between; 
+    padding: 0; 
+    margin: 20px 0; 
+}
+
+a {
+    text-decoration: none;
+    color: darkblue;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: whitesmoke;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: lightblue;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.calculate-button {
+    background-color: #35507889;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.calculate-button:hover {
+    background-color: #193a4f;
+}
+
+.back-button {
+    margin-left: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px 20px;
+    background-color: #193a4f;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}
+
+input {
+    background-color: rgba(169, 193, 215, 0.769);
+    border-radius: 15px;
+    max-width: 160px;
+    max-height: 30px;
+    font-size: 24px;
+}
+
+.result {
+    display: none;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: #1e299a8e;
+    width: 500px;
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
