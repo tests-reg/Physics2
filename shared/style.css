@@ -35,7 +35,7 @@ img { max-width: 100%; display: block; }
 button { cursor: pointer; font-family: var(--font); }
 
 .page-wrapper { display: flex; padding-top: var(--header-height); min-height: 100vh; }
-.page-content { flex: 1; margin-left: var(--nav-width); padding: 40px 48px; }
+.page-content { flex: 1;  padding: 40px 48px; }
 
 h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
 h2 { font-size: 1.4rem; color: var(--color-text-muted); margin-bottom: 1.5rem; }
